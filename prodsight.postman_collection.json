@@ -1,0 +1,349 @@
+{
+	"info": {
+		"_postman_id": "2644494d-106e-48de-abf7-1572e526b248",
+		"name": "prodsight",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add transaction (localhost)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"expense_type\" : \"invoice\",\n\t\"amount\" : 100.00,\n\t\"date\" : \"2000-01-03\",\n\t\"account_id\" : \"00000000-0000-0000-0000-000000000000\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/transactions/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"transactions",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List all transactions (localhost)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/transactions/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"transactions",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List one transaction (localhost)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/transactions/00000000-0000-0000-0000-000000000000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"transactions",
+						"00000000-0000-0000-0000-000000000000"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete one transaction (localhost)",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/transactions/00000000-0000-0000-0000-000000000000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"transactions",
+						"00000000-0000-0000-0000-000000000000"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List account details (localhost)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/accounts/00000000-0000-0000-0000-000000000000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"accounts",
+						"00000000-0000-0000-0000-000000000000"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List account details from date (localhost)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/accounts/00000000-0000-0000-0000-000000000000/2000-01-02/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"accounts",
+						"00000000-0000-0000-0000-000000000000",
+						"2000-01-02",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List account details from date to date (localhost)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/accounts/00000000-0000-0000-0000-000000000000/2000-01-02/2000-01-04/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"accounts",
+						"00000000-0000-0000-0000-000000000000",
+						"2000-01-02",
+						"2000-01-04",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add transaction (heroku)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"expense_type\" : \"invoice\",\n\t\"amount\" : 100.00,\n\t\"date\" : \"2000-01-03\",\n\t\"account_id\" : \"00000000-0000-0000-0000-000000000000\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://simple-django-rest-api.herokuapp.com/transactions/",
+					"protocol": "https",
+					"host": [
+						"simple-django-rest-api",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"transactions",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List all transactions (heroku)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://simple-django-rest-api.herokuapp.com/transactions/",
+					"protocol": "https",
+					"host": [
+						"simple-django-rest-api",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"transactions",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List one transaction (heroku)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://simple-django-rest-api.herokuapp.com/transactions/00000000-0000-0000-0000-000000000000",
+					"protocol": "https",
+					"host": [
+						"simple-django-rest-api",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"transactions",
+						"00000000-0000-0000-0000-000000000000"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete one transaction (heroku)",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://simple-django-rest-api.herokuapp.com/transactions/00000000-0000-0000-0000-000000000000",
+					"protocol": "https",
+					"host": [
+						"simple-django-rest-api",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"transactions",
+						"00000000-0000-0000-0000-000000000000"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List account details (heroku)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://simple-django-rest-api.herokuapp.com/accounts/00000000-0000-0000-0000-000000000000",
+					"protocol": "https",
+					"host": [
+						"simple-django-rest-api",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"accounts",
+						"00000000-0000-0000-0000-000000000000"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List account details from date (heroku)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://simple-django-rest-api.herokuapp.com/accounts/00000000-0000-0000-0000-000000000000/2000-01-02/",
+					"protocol": "https",
+					"host": [
+						"simple-django-rest-api",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"accounts",
+						"00000000-0000-0000-0000-000000000000",
+						"2000-01-02",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List account details from date to date (heroku)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://simple-django-rest-api.herokuapp.com/accounts/00000000-0000-0000-0000-000000000000/2000-01-02/2000-01-04/",
+					"protocol": "https",
+					"host": [
+						"simple-django-rest-api",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"accounts",
+						"00000000-0000-0000-0000-000000000000",
+						"2000-01-02",
+						"2000-01-04",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
